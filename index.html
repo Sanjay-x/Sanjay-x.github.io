@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanjay's Portfolio</title>
+  <link rel="stylesheet" href="D:\portfolio\style.css" />
+</head>
+<body>
+  <!-- Modal Container (Moved to top level) -->
+  <div id="modalContainer" class="modal-container">
+    <div class="dim-background"></div>
+    <div id="projectModal" class="modal">
+      <button class="close-btn" onclick="closeProject(event)">×</button>
+      <div id="projectContent"></div>
+    </div>
+  </div>
+
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <img src="img.jpg" class="profile-img" alt="Sanjay" />
+    <div class="hero-text-container">
+      <h1>Hi, This is <span class="highlight">Sanjay</span></h1>
+      <h2>
+        <div class="role-container">
+          <span class="static-text">I'm</span><span id="role-title"></span>
+        </div>
+      </h2>
+    </div>
+    <div class="intro-text">
+      <p class="intro-part">I work on building <span class="accent">smart systems</span> that make sense of data, solve real problems, and adapt to new challenges.</p>
+      <p class="intro-part">Whether it's analyzing patterns, exploring trends, or building models, I combine <span class="accent">data analysis</span> with <span class="accent">machine learning</span>, <span class="accent">generative AI</span>, and <span class="accent">intelligent agents</span> to deliver practical, well-engineered solutions.</p>
+    </div>
+  </section>
+
+  <!-- Contact / Social Icons -->
+  <section id="links">
+    <a href="https://drive.google.com/file/d/1VWi4JFikTZn-44SKHPOtTO-r-yuchmRn/view" target="_blank" class="icon-wrapper resume" data-tooltip="Resume">
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/resume.png" class="icon" alt="Resume"/>
+    </a>
+    <a href="https://www.linkedin.com/in/sanjay-s-24a37b342/" target="_blank" class="icon-wrapper linkedin" data-tooltip="LinkedIn">
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/linkedin.png" class="icon" alt="LinkedIn"/>
+    </a>
+    <a href="https://github.com/sanjay-x" target="_blank" class="icon-wrapper github" data-tooltip="GitHub">
+      <img src="https://img.icons8.com/ios-glyphs/100/ffffff/github.png" class="icon" alt="GitHub"/>
+    </a>
+    <a href="https://www.kaggle.com/sanjayx2003" target="_blank" class="icon-wrapper kaggle" data-tooltip="Kaggle">
+      <span class="icon kaggle-text">K</span>
+    </a>
+    
+  
+    <a href="mailto:sanjaysaravanan1003@gmail.com" class="icon-wrapper email" data-tooltip="Email">
+      <img src="https://img.icons8.com/ios-glyphs/100/ffffff/new-post.png" class="icon" alt="Email"/>
+    </a>
+    <a href="tel:+919025213336" class="icon-wrapper phone" data-tooltip="Call Me">
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/phone.png" class="icon" alt="Phone"/>
+    </a>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <button class="slider-btn prev" onclick="slideProjects('prev')">&#10094;</button>
+    <div class="scroll-container">
+      <div class="project-card" data-project="agent" onclick="openProject('agent')">
+        <img src="AI RESEARCH.jpeg" alt="AI Research Agent" />
+        <h3 class="project-title">AI Research Agent</h3>
+      </div>
+      <div class="project-card" data-project="mri" onclick="openProject('mri')">
+        <img src="MRI.png" alt="MRI Scan & RAG" />
+        <h3 class="project-title">MRI Scan & RAG</h3>
+      </div>
+      <div class="project-card" data-project="cluster" onclick="openProject('cluster')">
+        <img src="customer.png" alt="Customer Clustering" />
+        <h3 class="project-title">Customer Clustering</h3>
+      </div>
+      <div class="project-card" data-project="unemployment" onclick="openProject('unemployment')">
+        <img src="chart.jpg" alt="Unemployment Forecast" />
+        <h3 class="project-title">Unemployment Forecast</h3>
+      </div>
+    </div>
+    <button class="slider-btn next" onclick="slideProjects('next')">&#10095;</button>
+  </section>
+
+  <!-- Project Ideas -->
+  <section id="ideas">
+    <h2>Project Ideas</h2>
+    <button class="slider-btn prev" onclick="slideIdeas('prev')">&#10094;</button>
+    <div class="scroll-container">
+      <div class="project-card" data-project="realestate" onclick="openProject('realestate')">
+        <img src="real.jpeg" alt="Real Estate Intelligence" />
+        <h3 class="project-title">Real Estate Intelligence</h3>
+      </div>
+      <div class="project-card">
+        <h3 class="project-title">More to Come...</h3>
+      </div>
+    </div>
+    <button class="slider-btn next" onclick="slideIdeas('next')">&#10095;</button>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="techstack">
+    <h2>Tech Stack</h2>
+    <div class="tech-list">
+      <span>Python</span>
+      <span>SQL</span>
+      <span>Excel</span>
+      <span>MS Office</span>
+      <span>Pandas</span>
+      <span>NumPy</span>
+      <span>Scikit-learn</span>
+      <span>Statsmodels</span>
+      <span>Supervised Learning</span>
+      <span>Unsupervised Learning</span>
+      <span>TensorFlow</span>
+      <span>Keras</span>
+      <span>PyTorch</span>
+      <span>CNN</span>
+      <span>NLP</span>
+      <span>GenAI</span>
+      <span>RAG</span>
+      <span>Fine-tuning</span>
+      <span>AI Agents</span>
+      <span>LangChain</span>
+      <span>Vector Databases</span>
+      <span>Web Scraping</span>
+      <span>Django</span>
+      <span>Streamlit</span>
+      <span>Power BI</span>
+      <span>Tableau</span>
+      <span>Jupyter</span>
+      <span>Git</span>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+  
+    <div class="edu-card">
+      <div class="edu-info">
+        <img src="rkmvc.png" alt="Vivekananda College Logo" />
+        <h3>Vivekananda College, Chennai</h3>
+      </div>
+      <p>Bachelor of Computer Application (2021 - 2024)</p>
+    </div>
+  
+    <div class="edu-card">
+      <div class="edu-info">
+        <img src="school.png" alt="Santhome School Logo" />
+        <h3>Santhome Higher Secondary School</h3>
+      </div>
+      <p>HSC – Computer Science (2019 - 2021)</p>
+    </div>
+  </section>
+  
+
+  <!-- Certificates -->
+  <section id="certificates">
+  <h2>Certificates</h2>
+  <div class="cert-card">
+    <!-- <img src="assets/certificate.png" /> -->
+    <h3>Data Science & Artificial Intelligence</h3>
+    <p>July - November 2024</p>
+  </div>
+</section>
+
+
+  <!-- What I Really Do -->
+  <section id="what-i-do">
+    <h2>What I Really Do</h2>
+    <div class="content-wrapper">
+      <div class="text-content">
+        <p class="reveal-text">You're not hiring for a single role you're investing in someone who builds AI research agents, fine-tunes GenAI models, engineers intelligent systems, and experiments with multimodal concepts.</p>
+        <p class="reveal-text">From deep learning to prompt engineering, from real-time data to responsible AI, I work where tech meets thought.</p>
+        <p class="reveal-text highlight-text">This isn't just machine learning. It's building the next version of what machines can mean.</p>
+      </div>
+      <div class="interactive-elements">
+        <div class="tech-bubble" data-category="AI Research">AI Agents</div>
+        <div class="tech-bubble" data-category="GenAI">Model Fine-tuning</div>
+        <div class="tech-bubble" data-category="Systems">Intelligent Systems</div>
+        <div class="tech-bubble" data-category="Innovation">Multimodal Concepts</div>
+        <!-- <div class="tech-bubble" data-category="Core">Deep Learning</div>
+        <div class="tech-bubble" data-category="Modern">Prompt Engineering</div> -->
+        <div class="tech-bubble" data-category="Data">Real-time Data</div>
+        <div class="tech-bubble" data-category="Ethics">Responsible AI</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- External JavaScript -->
+  <script src="D:\portfolio\scripts.js"></script>
+</body>
+</html>
