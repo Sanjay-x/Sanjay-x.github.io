@@ -600,7 +600,7 @@ body.modal-open section:not(.modal-container) {
 /* Very small screens */
 @media (max-width: 360px) {
   #projectModal {
-    margin: 24px 12px;
+    margin: 10px 5px;
     width: calc(100% - 24px) !important;
   }
 }
