@@ -551,9 +551,9 @@ body.modal-open section:not(.modal-container) {
 }
 
 /* Mobile Styles */
-@media (max-width: 480px) {
-  #projectModal {
-    margin: 10px 5px;
+/* @media (max-width: 480px) {
+  #projectModal { */
+/*     margin: 10px 5px;
     width: calc(100% - 32px) !important;
     max-width: none;
     max-height: calc(100vh - 48px);
@@ -564,7 +564,7 @@ body.modal-open section:not(.modal-container) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.95);
-    z-index: 1000000;
+    z-index: 1000000; */
   }
 
   #projectModal.active {
