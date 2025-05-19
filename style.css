@@ -808,8 +808,8 @@ body.modal-open section:not(.modal-container) {
   #projectModal {
     margin: 24px;
     width: auto;
-    max-width: calc(100vw - 48px);
-    max-height: calc(100vh - 48px);
+    max-width: calc(100vw - 32px);
+    max-height: calc(100vh - 32px);
     border-radius: 15px;
     border: 2px solid #ff4444;
     padding: 1.5rem 1rem;
