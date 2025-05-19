@@ -411,6 +411,9 @@ body.modal-open section:not(.modal-container) {
   flex-direction: column;
   margin: 1rem;
   transform: scale(0.95);
+  margin-top: 80px;
+  margin-bottom: 80px;
+  max-height: calc(100vh - 160px);
 }
 
 #projectModal.active {
@@ -751,6 +754,33 @@ body.modal-open section:not(.modal-container) {
   #projects, #ideas {
     padding: 1.5rem 1rem;
   }
+
+  /* (Mobile) Ensure project modal has margin on all sides (top, bottom, left, right) and does not touch screen edges */
+  #projectModal {
+    margin: 16px !important; /* Fixed margin on all sides */
+    width: auto !important;
+    max-width: calc(100vw – 32px);
+    max-height: calc(100vh – 32px);
+    box-sizing: border-box;
+    border-radius: 15px !important;
+    border: 2px solid #ff4444 !important;
+    padding: 1.25rem 1rem;
+  }
+}
+
+/* (Very small screens) Override any conflicting rules (e.g. margin: 0, border-radius: 0) so that the modal always has a margin and a border-radius. */
+@media (max-width: 480px) {
+  /* (Removed or commented out the conflicting rule that set margin: 0 and border-radius: 0) */
+  /* #projectModal { margin: 0; border-radius: 0; } */
+  #projectModal {
+    margin: 16px !important; /* Fixed margin on all sides */
+    width: auto !important;
+    max-width: calc(100vw – 32px);
+    max-height: calc(100vh – 32px);
+    border-radius: 12px !important;
+    border: 2px solid #ff4444 !important;
+    padding: 1rem 0.5rem;
+  }
 }
 
 #techstack .tech-list {
@@ -858,46 +888,21 @@ body.modal-open section:not(.modal-container) {
   background: linear-gradient(145deg, #333333, #2b2b2b);
 }
 
-.icon-wrapper.kaggle {
-  background: linear-gradient(145deg, #141414, #1a1a1a);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
+.icon-wrapper.kaggle .icon {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  padding: 0;
-  text-decoration: none;
+  background-color: #111;
+  padding: 5px;
+  margin: 10px;
+  border: 2px solid #e60000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background: #000;
 }
 
-.icon-wrapper.kaggle .kaggle-text {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  width: 28px;
-  height: 28px;
-  margin: 0;
-  text-decoration: none;
-}
-
-.icon-wrapper.kaggle:hover {
-  background: linear-gradient(145deg, #20BEFF, #1DA1F2);
-}
-
-.icon-wrapper.kaggle:hover .kaggle-text {
-  transform: scale(1.1);
-}
-
-.icon-wrapper.email:hover {
-  background: linear-gradient(145deg, #ff2e2e, #cc0000);
-}
-
-.icon-wrapper.phone:hover {
-  background: linear-gradient(145deg, #00b300, #008000);
+.icon-wrapper.kaggle:hover .icon {
+  transform: scale(1.2);
+  background-color: #e60000;
 }
 
 @media (max-width: 768px) {
@@ -906,13 +911,36 @@ body.modal-open section:not(.modal-container) {
   }
   
   .icon-wrapper {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
+    padding: 4px;
   }
   
   .icon {
     width: 24px;
     height: 24px;
+  }
+
+  .icon-wrapper.kaggle {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .icon-wrapper.kaggle .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-wrapper.kaggle {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .icon-wrapper.kaggle .icon {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -1456,6 +1484,62 @@ body.modal-open section:not(.modal-container) {
   margin: 0;
   font-size: 1.2rem;
   color: #fff;
+}
+
+/* Make Kaggle icon responsive like others */
+.icon-wrapper .kaggle-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #20beff;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Montserrat', Arial, sans-serif;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  transition: width 0.2s, height 0.2s, font-size 0.2s;
+}
+
+@media (max-width: 600px) {
+  .icon-wrapper .icon,
+  .icon-wrapper .kaggle-text {
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+  }
+}
+
+.icon-wrapper.kaggle .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #111;
+  padding: 5px;
+  margin: 10px;
+  border: 2px solid #e60000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background: #000;
+}
+
+.icon-wrapper.kaggle:hover .icon {
+  transform: scale(1.2);
+  background-color: #e60000;
+}
+
+@media (max-width: 768px) {
+  .icon-wrapper.kaggle .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-wrapper.kaggle .icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 
