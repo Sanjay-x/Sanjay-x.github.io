@@ -553,7 +553,7 @@ body.modal-open section:not(.modal-container) {
 /* Mobile Styles */
 @media (max-width: 480px) {
   #projectModal {
-    margin: 24px 16px;
+    margin: 10px 5px;
     width: calc(100% - 32px) !important;
     max-width: none;
     max-height: calc(100vh - 48px);
