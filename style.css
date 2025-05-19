@@ -411,8 +411,8 @@ body.modal-open section:not(.modal-container) {
   flex-direction: column;
   margin: 1rem;
   transform: scale(0.95);
-  margin-top: 120px;
-  margin-bottom: 120px;
+  margin-top: 80px;
+  margin-bottom: 80px;
   max-height: calc(100vh - 160px);
 }
 
