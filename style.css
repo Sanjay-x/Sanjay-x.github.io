@@ -402,7 +402,7 @@ body.modal-open section:not(.modal-container) {
   max-height: 90vh;
   border-radius: 15px;
   border: 2px solid #ff4444;
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
@@ -410,7 +410,7 @@ body.modal-open section:not(.modal-container) {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin: 80px;
+  margin: 70px;
   transform: scale(0.95);
   max-height: calc(100vh - 160px);
   z-index: 1000000;
