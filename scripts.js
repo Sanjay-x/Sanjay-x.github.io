@@ -46,7 +46,8 @@ function openProject(name) {
       <h4>Technologies</h4>
       <div class="tech-tags">
         <span>Python</span>
-        <span>Streamlit</span>
+        <span>Beautifulsoup</span>
+        <span>Plawright</span>
         <span>Gemini LLM API</span>
         <span>Google Custom Search API</span>
         <span>ReportLab</span>
@@ -77,7 +78,7 @@ function openProject(name) {
       <h4>Technologies</h4>
       <div class="tech-tags">
         <span>Python</span>
-        <span>Streamlit</span>
+        <span>CNN</span>
         <span>TensorFlow</span>
         <span>Cohere API</span>
         <span>SentenceTransformers</span>
@@ -113,6 +114,7 @@ function openProject(name) {
         <span>Scikit-learn</span>
         <span>Matplotlib</span>
         <span>Seaborn</span>
+        <span>Cluster Models</span>
       </div>
 
       <h4>Project Structure</h4>
